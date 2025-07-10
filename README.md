@@ -4,12 +4,13 @@ This project involves building a Anomalous Detection system using an autoencoder
 
 ## Techniques Used
 
-- Data processing
+- Data Processing
+- Exploratory Data Analysis
 - Data Visualization
 - Data Analysis
 - Model Building
 
-## Tools Used
+## Libraries Used
 
 - pandas
 - seaborn
@@ -17,18 +18,23 @@ This project involves building a Anomalous Detection system using an autoencoder
 - tensorflow with keras
 - sklearn train_test_split
 - python
+- hashlib
+- pickle
+- sqlite3
+- numpy
+- gzip
+- os
 
 ## 1.) Data Extraction
 
-- The Data set was imported locally
-- Initially: 592337 x 22 columns
+- The Data set was imported from zeek using conn.log data
+- Initially: 1243021 x 22 columns
+- After Cleaning/Processing: 1243021 x 55
 
 ## 2.) EDA
 
-- Peformed operations:
-  - info(), describe(), value_counts()
-  - isnull().sum
-  - histogram analysis
+- Heatmap on numerical values
+  ![alt text](https://github.com/spinklerz/Network-IDS/images/HeatMap.png "HeatMap")
 
 ### Conclusions
 
