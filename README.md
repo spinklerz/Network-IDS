@@ -34,7 +34,7 @@ This project involves building a Anomalous Detection system using an autoencoder
 ## 2.) EDA
 
 - Heatmap on numerical values
-  ![alt text](https://github.com/spinklerz/Network-IDS/images/HeatMap.png "HeatMap")
+  ![alt text](https://github.com/spinklerz/Network-IDS/blob/main/images/HeatMap.png "HeatMap")
 
 ### Conclusions
 
