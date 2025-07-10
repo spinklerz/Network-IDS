@@ -33,9 +33,11 @@ This project involves building a Anomalous Detection system using an autoencoder
 
 ## 2.) EDA
 
-- Heatmap on numerical values
+Heatmap on numerical values
+  
   ![alt text](https://github.com/spinklerz/Network-IDS/blob/main/images/HeatMap.png "HeatMap")
-
+Notes: 
+  - It's important to notice positively correlated values as they lead insight into feature engineering and 
 ### Conclusions
 
 - Our histograms are one contigous block, given that network data can be very dynamic and unique I would say this is expected behavior.
