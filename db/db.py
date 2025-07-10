@@ -53,7 +53,7 @@ def dump_all_activity(DATABASE="anomalous_db.db"):
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM anomalous")
     data = cursor.fetchall()
-    print(f"\n{G}*****ALL THE FALSE POSITIVES LETS GOO******{W}")
+    print(f"\n{G}*****DB******{W}")
     print(f"{B}{'SRC IP': <15} {'DST IP': <15} {'SRC PORT': <15} {'DST PORT': <15} {'PROTO': <15} {'SERVICE': <5}{W}")
     for x in data:
         print(f"{x[0]: <15} {x[1]: <15} {x[2]: <15} {x[3]: <15} {x[4]: <15} {x[5]: <5}")
