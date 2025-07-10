@@ -1,6 +1,6 @@
 # Network Anomoly Detector
 
-This project involves building a Anomalous Detection system using an autoencoder based on my own zeek data I generated over the course of about 2 weeks.
+This project involves building a Anomalous Detection system using an autoencoder based on my own zeek data in which I generated about 1.2m packets of data.
 
 ## Techniques Used
 
