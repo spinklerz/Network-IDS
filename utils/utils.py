@@ -25,12 +25,17 @@ def preprocessing(df):
 
     # Feature Engineering
     f_data = df.copy()
-    f_data['src_bytes/src_pkts'] = f_data['src_bytes'] + f_data['orig_pkts']
-    f_data['dst_bytes/dst_pkts'] = f_data['dst_bytes'] + f_data['resp_pkts']
-    f_data.drop(['src_bytes', 'orig_pkts', 'dst_bytes', 'resp_pkts', 'orig_ip_bytes', 'resp_ip_bytes'], axis=1, inplace=True)
-    # Everything Looks good!
+    f_data['dst_bytes_per_orig_pkt'] = (f_data['dst_bytes'] / f_data['orig_pkts']).replace(0, 1)
+    f_data['dst_bytes_per_resp_pkt'] = (f_data['dst_bytes'] / f_data['resp_pkts']).replace(0, 1)
+
+
+        # Replace infinite values with a reasonable fallback
+    f_data['dst_bytes_per_orig_pkt'] = f_data['dst_bytes_per_orig_pkt'].replace([np.inf, -np.inf], 0)
+        # Drop the component features you've engineered from, but keep src_bytes
+    f_data.drop(['orig_pkts', 'dst_bytes', 'resp_pkts', 'orig_ip_bytes', 'resp_ip_bytes'], axis=1, inplace=True)
+            # Everything Looks good!
     # Drop Missed_bytes
-    fv2_data = df.drop(columns=['missed_bytes'])
+    f_data = f_data.drop(columns=['missed_bytes'])
     e_data = f_data.copy()
 
 
