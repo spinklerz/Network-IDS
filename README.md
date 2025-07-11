@@ -184,7 +184,7 @@ Training Reconstruction Loss Graph
 
 - Flag only 5% of traffic as anomalous.
 
-- Append these 5% to an SQLite3 server.
+- Append these 5% to an SQLite3 db.
 
 - Then dump the SQLite3 DB to see results.
 
