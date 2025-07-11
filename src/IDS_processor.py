@@ -25,8 +25,8 @@ TOTAL_PACKETS = 0
 global ANON_PACKETS 
 ANON_PACKETS = 0
 
-expected_columns = ['uid', 'src_ip', 'src_p', 'dst_ip', 'dst_p', 'duration', 'missed_bytes',
-                'history', 'ip_proto', 'src_bytes/src_pkts', 'dst_bytes/dst_pkts',
+expected_columns = ['uid', 'src_ip', 'src_p', 'dst_ip', 'dst_p', 'duration','src_bytes' , 
+                'history', 'ip_proto', 'dst_bytes_per_orig_pkt', 'dst_bytes_per_resp_pkt',  
                 'proto_tcp', 'proto_udp', 'proto_unknown_transport', 'service_ayiya',
                 'service_ayiya,quic', 'service_dce_rpc,ntlm,smb,gssapi',
                 'service_dce_rpc,smb,gssapi,ntlm', 'service_dhcp', 'service_dns',
@@ -61,7 +61,8 @@ def getData(fp):
     new_data = utils.preprocessing(data)
     # Align your data with the expected columns
     new_data = new_data.reindex(columns=expected_columns, fill_value=0)
-
+    print(new_data.columns)
+    print(new_data.shape)
     features_scaled = scaler.transform(new_data)
 
     # Continue with prediction

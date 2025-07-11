@@ -35,9 +35,8 @@ def preprocessing(df):
     f_data.drop(['orig_pkts', 'dst_bytes', 'resp_pkts', 'orig_ip_bytes', 'resp_ip_bytes'], axis=1, inplace=True)
             # Everything Looks good!
     # Drop Missed_bytes
-    f_data = f_data.drop(columns=['missed_bytes'])
+    f_data = f_data.drop(columns=['missed_bytes'], axis=1 )
     e_data = f_data.copy()
-
 
     # Set ip datatype
     temp1 = []
