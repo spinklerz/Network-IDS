@@ -67,7 +67,24 @@ Network Traffic
 
 Notes: 
 - Cool to see network traffic visualization, per each day, the example above is on 2025-02-22 data
-- You can find the rest of the distributions and more visualization in the file ./Notebooks/03_preprocessing_cleaning_feature_engineering.ipynb
+- You can find the rest of the distributions and more visualization in the file ./Notebooks/02_Exploratory_Data_Analysis.ipynb
+
+*** 
+
+Top Protocols
+
+![alt text](https://github.com/spinklerz/Network-IDS/blob/main/images/TopProtocols.png "Top Protocols")
+
+*** 
+
+Top Services 
+
+![alt text](https://github.com/spinklerz/Network-IDS/blob/main/images/TopServices.png "Top Services")
+
+Notes: 
+- "-" means zeek could not determine the service
+- It interesting to see how populated dns queries are, as on wireshark I usually don't see too many.
+  
 
 ### Conclusions
 
